@@ -9,11 +9,17 @@
     <PackageReference Include="Hellang.Middleware.ProblemDetails" Version="5.4.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.17">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\SettlementBookingSystem.Application\SettlementBookingSystem.Application.csproj" />
+    <ProjectReference Include="..\SettlementBookingSystem.Infrastructure\SettlementBookingSystem.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

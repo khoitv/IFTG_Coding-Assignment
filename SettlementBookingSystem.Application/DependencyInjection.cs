@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using SettlementBookingSystem.Application.Behaviours;
 using System.Linq;
 using System.Reflection;
+using System.Text.Json;
 
 namespace SettlementBookingSystem.Application
 {
@@ -17,8 +18,12 @@ namespace SettlementBookingSystem.Application
             services.AddFluentValidation(assembly);
             services.AddMediatR(cfg => cfg.AsScoped(), assembly);
 
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehaviour<>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(UnhandledExceptionBehaviour<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestValidationBehaviour<,>));
+
+           
+  
 
             return services;
         }
