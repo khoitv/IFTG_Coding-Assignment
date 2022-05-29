@@ -1,4 +1,4 @@
-# SettlementBookingTest
+ # SettlementBookingTest
 
 ## Versions
 
@@ -12,8 +12,14 @@
 This implementatrion also provides unit tests with a mocked repository.
 
 ## How to execute
-
-1. Basic:
+1. Configurations:
+```
+  "BookingSettings": {
+    "NumberOfSettlement": 4, //Limit of number of settlements
+    "SpotTime": 1 //During booking time in hour
+  }
+```
+2. Basic:
 
 ```
 curl --request POST \
@@ -25,7 +31,7 @@ curl --request POST \
 }'
 ```
 
-2. Mediator
+3. Mediator
 
 ```
 curl --request POST \
